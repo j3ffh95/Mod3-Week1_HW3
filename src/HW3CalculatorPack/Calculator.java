@@ -6,43 +6,40 @@ public class Calculator {
 
 	public static void main(String[] args) {
 
-		char operator_selection;
-		Double user_num1, user_num2, result;
-
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Enter first number: ");
-		user_num1 = scan.nextDouble();
+		System.out.println("First number: ");
+		double userNum1 = scan.nextDouble();
 
-		System.out.println("Enter second number: ");
-		user_num2 = scan.nextDouble();
+		System.out.println("Second number: ");
+		double userNum2 = scan.nextDouble();
 
-		System.out.println("Select between 1-5. 1:Add, 2:Subtract, 3:Multiply, 4:Divide, 5:Exit : ");
-		operator_selection = scan.next().charAt(0);
+		System.out.println("Please select between 1-5. 1:Add, 2:Subtract, 3:Multiply, 4:Divide, 5:Exit ");
+		char operatorInput = scan.next().charAt(0);
 
-		switch (operator_selection) {
+		switch (operatorInput) {
 		case '1':
-			result = add(user_num1, user_num2);
-			System.out.println(user_num1 + " + " + user_num2 + " = " + result);
+			double result = add(user_num1, user_num2);
+			System.out.println(userNum1 + " + " + userNum2 + " = " + result);
 			break;
 		case '2':
-			result = subtract(user_num1, user_num2);
-			System.out.println(user_num1 + " - " + user_num2 + " = " + result);
+			double result = subtract(user_num1, user_num2);
+			System.out.println(userNum1 + " - " + userNum2 + " = " + result);
 			break;
 		case '3':
-			result = multiply(user_num1, user_num2);
-			System.out.println(user_num1 + " * " + user_num2 + " = " + result);
+			double result = multiply(user_num1, user_num2);
+			System.out.println(userNum1 + " * " + userNum2 + " = " + result);
 			break;
 		case '4':
-			result = divide(user_num1, user_num2);
-			System.out.println(user_num1 + " / " + user_num2 + " = " + result);
+			double result = divide(user_num1, user_num2);
+			System.out.println(userNum1 + " / " + userNum2 + " = " + result);
 			break;
 		case '5':
 			System.out.println(" You have now exited ");
 			break;
 
 		default:
-			System.out.println("Invalid Entry, Try Again!");
+			System.out.println("Invalid Entry");
 			break;
 
 		}
