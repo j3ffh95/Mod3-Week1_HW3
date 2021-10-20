@@ -8,10 +8,10 @@ public class Calculator {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("First number: ");
+		System.out.println("Enter First number: ");
 		double userNum1 = scan.nextDouble();
 
-		System.out.println("Second number: ");
+		System.out.println("Enter Second number: ");
 		double userNum2 = scan.nextDouble();
 
 		System.out.println("Please select between 1-5. 1:Add, 2:Subtract, 3:Multiply, 4:Divide, 5:Exit ");
